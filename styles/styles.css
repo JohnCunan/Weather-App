@@ -1,4 +1,4 @@
-body {
+body { 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,6 +60,7 @@ h1.temp {
     margin: 0;
     margin-bottom: .4em;
 }
+
 
 .flex {
     display: flex;
