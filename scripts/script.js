@@ -5,8 +5,15 @@ let weather = {
             + city
             + "&units=metric&appid="
             + this.apiKey
-        )
-            .then((response) => response.json())
+        )   
+        .then(res => {
+            if (res.status === 404) {
+               const error = new Error();
+               error.message = 'You have to introduce a valid city name';
+               throw error;
+            }
+         })
+            .then(res =>  res.json())
             .then((data) => this.displayWeather(data));
     },
 
